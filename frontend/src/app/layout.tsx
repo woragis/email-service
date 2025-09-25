@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { Header, Footer } from "../components/layout";
-import { QueryProvider, AuthProvider } from "../components/providers";
+import { ThemeProvider } from "../components/providers";
 import "./globals.css";
 
 const inter = Inter({
@@ -23,30 +23,30 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jazz Melodic - Where Technique Meets Artistry",
-  description: "Learn from the masters, create with the community. Your musical journey, amplified.",
-  keywords: ["music", "jazz", "learning", "tutorials", "courses", "videos", "blog"],
-  authors: [{ name: "Jazz Melodic Team" }],
-  creator: "Jazz Melodic",
-  publisher: "Jazz Melodic",
+  title: "EmailService - Your Perfect Email Interface",
+  description: "Choose your perfect email interface style. Gmail Classic, Outlook Advanced, Apple Minimal, or Proton Privacy.",
+  keywords: ["email", "gmail", "outlook", "apple", "proton", "interface", "privacy", "security"],
+  authors: [{ name: "EmailService Team" }],
+  creator: "EmailService",
+  publisher: "EmailService",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://jazzmelodic.com"),
+  metadataBase: new URL("https://emailservice.com"),
   openGraph: {
-    title: "Jazz Melodic - Where Technique Meets Artistry",
-    description: "Learn from the masters, create with the community. Your musical journey, amplified.",
-    url: "https://jazzmelodic.com",
-    siteName: "Jazz Melodic",
+    title: "EmailService - Your Perfect Email Interface",
+    description: "Choose your perfect email interface style. Gmail Classic, Outlook Advanced, Apple Minimal, or Proton Privacy.",
+    url: "https://emailservice.com",
+    siteName: "EmailService",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jazz Melodic - Where Technique Meets Artistry",
-    description: "Learn from the masters, create with the community. Your musical journey, amplified.",
+    title: "EmailService - Your Perfect Email Interface",
+    description: "Choose your perfect email interface style. Gmail Classic, Outlook Advanced, Apple Minimal, or Proton Privacy.",
   },
   robots: {
     index: true,
@@ -71,17 +71,15 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} antialiased`}
       >
-        <QueryProvider>
-          <AuthProvider>
-            <div className="app-layout">
-              <Header />
-              <main className="main-content">
-                {children}
-              </main>
-              <Footer />
-            </div>
-          </AuthProvider>
-        </QueryProvider>
+        <ThemeProvider>
+          <div className="app-layout">
+            <Header />
+            <main className="main-content">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

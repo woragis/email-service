@@ -5,3 +5,15 @@
 
 /* Import our custom design system */
 @import '../styles/index.css';
+
+/* Import preferences styles */
+@import '../../public/styles/preferences.css';
+
+/* Import email page styles */
+@import '../../public/styles/email-page.css';
+
+/* Import homepage styles */
+@import '../../public/styles/homepage.css';
+
+/* Import header email styles */
+@import '../../public/styles/header-email.css';
