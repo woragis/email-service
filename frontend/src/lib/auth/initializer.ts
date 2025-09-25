@@ -3,9 +3,9 @@
  * Checks for existing auth tokens and initializes the auth store
  */
 
-import { useAuthStore } from '@/lib/stores/auth';
+import { useAuthStore } from '@/stores/auth';
 import { authApi } from '@/lib/api/auth';
-import { authKeys } from '@/lib/stores/auth';
+import { authKeys } from '@/stores/auth';
 import { QueryClient } from '@tanstack/react-query';
 
 export interface AuthInitializationResult {

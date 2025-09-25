@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 import { env } from './env';
-import { useAuthStore } from './stores/auth';
+import { useAuthStore } from '@/stores/auth';
 import { ApiResponse, RequestConfig, ResponseError } from '@/types/api';
 
 class ApiClient {
