@@ -1,7 +1,7 @@
 import { useQueryClient } from '@tanstack/react-query';
 import { create } from 'zustand';
 import { User, AuthResponse } from '@/types/api';
-import { authCookies } from '@/lib/utils/cookies';
+import { authCookies } from '@/utils/cookies';
 
 // Auth state interface
 interface AuthState {
