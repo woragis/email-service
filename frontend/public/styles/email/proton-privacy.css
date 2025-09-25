@@ -1,0 +1,302 @@
+/* Proton Privacy Theme - Light Mode */
+
+/* Root Variables */
+:root {
+  --proton-primary: #6d4aff;
+  --proton-secondary: #00d4aa;
+  --proton-accent: #ff6b35;
+  --proton-error: #ff3b30;
+  --proton-bg-primary: #ffffff;
+  --proton-bg-secondary: #f8f9fa;
+  --proton-bg-tertiary: #e9ecef;
+  --proton-text-primary: #1a1a1a;
+  --proton-text-secondary: #6c757d;
+  --proton-text-tertiary: #adb5bd;
+  --proton-border: #dee2e6;
+  --proton-border-light: #e9ecef;
+  --proton-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --proton-shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Proton Layout */
+.email-layout.proton-privacy {
+  background-color: var(--proton-bg-secondary);
+  color: var(--proton-text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.proton-privacy-layout .email-container {
+  display: flex;
+  height: 100vh;
+  background-color: var(--proton-bg-secondary);
+}
+
+/* Privacy-focused Sidebar */
+.email-sidebar.privacy {
+  width: var(--sidebar-width, 260px);
+  background-color: var(--proton-bg-primary);
+  border-right: 2px solid var(--proton-border);
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+}
+
+/* Compose Button */
+.compose-section {
+  padding: 0 16px 16px;
+}
+
+.compose-button {
+  width: 100%;
+  background: var(--proton-primary);
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 24px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.compose-button:hover {
+  background: #5a3dd4;
+  box-shadow: var(--proton-shadow-hover);
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--proton-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 16px 16px 8px;
+}
+
+.folder-list, .label-list, .category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.folder-item, .label-item, .category-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-align: left;
+}
+
+.folder-item:hover, .label-item:hover, .category-item:hover {
+  background-color: var(--proton-bg-tertiary);
+}
+
+.folder-item.active, .label-item.active, .category-item.active {
+  background-color: var(--proton-bg-tertiary);
+  font-weight: 500;
+}
+
+.folder-icon, .category-icon {
+  margin-right: 12px;
+  font-size: 16px;
+}
+
+.label-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.folder-name, .label-name, .category-name {
+  flex: 1;
+  font-size: 14px;
+  color: var(--proton-text-primary);
+}
+
+.folder-count, .label-count, .category-count {
+  background-color: var(--proton-primary);
+  color: white;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  min-width: 20px;
+  text-align: center;
+}
+
+.privacy-panel {
+  margin-top: 20px;
+  padding: 16px;
+  border-top: 1px solid var(--proton-border-light);
+  background-color: var(--proton-bg-tertiary);
+  border-radius: 8px;
+  margin: 20px 16px 0;
+}
+
+.privacy-panel h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--proton-text-primary);
+  margin-bottom: 16px;
+}
+
+.privacy-settings {
+  margin-bottom: 16px;
+}
+
+.privacy-setting {
+  margin-bottom: 12px;
+}
+
+.privacy-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--proton-text-primary);
+  cursor: pointer;
+}
+
+.privacy-description {
+  font-size: 11px;
+  color: var(--proton-text-secondary);
+  margin: 4px 0 0 24px;
+  line-height: 1.3;
+}
+
+.privacy-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Privacy-focused Toolbar */
+.email-toolbar.privacy {
+  padding: 16px;
+  border-bottom: 1px solid var(--proton-border);
+  background-color: var(--proton-bg-primary);
+  box-shadow: var(--proton-shadow);
+}
+
+.privacy-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Enhanced Email List with Privacy Indicators */
+.email-list-item {
+  display: grid;
+  grid-template-columns: 24px 24px 1fr auto 100px 80px;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--proton-border-light);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-items: center;
+  position: relative;
+}
+
+.email-list-item:hover {
+  background-color: var(--proton-bg-tertiary);
+}
+
+.email-list-item.selected {
+  background-color: rgba(109, 74, 255, 0.1);
+}
+
+.email-list-item.unread {
+  background-color: rgba(109, 74, 255, 0.05);
+}
+
+/* Encryption indicators */
+.email-list-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--proton-secondary);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.email-list-item.encrypted::before {
+  opacity: 1;
+}
+
+/* Privacy labels */
+.email-label.label-work {
+  background-color: rgba(109, 74, 255, 0.1);
+  color: var(--proton-primary);
+}
+
+.email-label.label-personal {
+  background-color: rgba(0, 212, 170, 0.1);
+  color: var(--proton-secondary);
+}
+
+.email-label.label-important {
+  background-color: rgba(255, 107, 53, 0.1);
+  color: var(--proton-accent);
+}
+
+/* Security indicators */
+.security-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: 12px;
+  background-color: var(--proton-bg-tertiary);
+  color: var(--proton-text-secondary);
+}
+
+.security-indicator.encrypted {
+  background-color: rgba(0, 212, 170, 0.1);
+  color: var(--proton-secondary);
+}
+
+.security-indicator.verified {
+  background-color: rgba(109, 74, 255, 0.1);
+  color: var(--proton-primary);
+}
+
+/* Proton-specific styling */
+.email-layout.proton-privacy .email-sidebar {
+  border-right: 2px solid var(--proton-border);
+}
+
+.email-layout.proton-privacy .email-list-panel {
+  border-right: 1px solid var(--proton-border);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .proton-privacy-layout .email-container {
+    flex-direction: column;
+  }
+  
+  .email-sidebar.privacy {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--proton-border);
+  }
+  
+  .email-list-panel {
+    width: 100%;
+    border-right: none;
+  }
+  
+  .email-content-panel {
+    width: 100%;
+  }
+}

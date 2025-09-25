@@ -1,0 +1,145 @@
+/* Proton Privacy Theme - Dark Mode */
+
+/* Root Variables for Dark Mode */
+:root {
+  --proton-primary: #6d4aff;
+  --proton-secondary: #00d4aa;
+  --proton-accent: #ff6b35;
+  --proton-error: #ff3b30;
+  --proton-bg-primary: #1a1a1a;
+  --proton-bg-secondary: #2d2d2d;
+  --proton-bg-tertiary: #3a3a3a;
+  --proton-text-primary: #ffffff;
+  --proton-text-secondary: #b0b0b0;
+  --proton-text-tertiary: #808080;
+  --proton-border: #404040;
+  --proton-border-light: #4a4a4a;
+  --proton-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --proton-shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode specific overrides */
+.email-layout.proton-privacy[data-theme="dark"] {
+  background-color: var(--proton-bg-secondary);
+  color: var(--proton-text-primary);
+}
+
+.proton-privacy-layout[data-theme="dark"] .email-container {
+  background-color: var(--proton-bg-secondary);
+}
+
+.email-sidebar.privacy[data-theme="dark"] {
+  background-color: var(--proton-bg-primary);
+  border-right-color: var(--proton-border);
+}
+
+.privacy-panel[data-theme="dark"] {
+  background-color: var(--proton-bg-tertiary);
+  border-top-color: var(--proton-border-light);
+}
+
+.email-toolbar.privacy[data-theme="dark"] {
+  background-color: var(--proton-bg-primary);
+  border-bottom-color: var(--proton-border);
+}
+
+.email-list[data-theme="dark"] {
+  background-color: var(--proton-bg-primary);
+}
+
+.email-list-item[data-theme="dark"] {
+  border-bottom-color: var(--proton-border-light);
+}
+
+.email-list-item[data-theme="dark"]:hover {
+  background-color: var(--proton-bg-tertiary);
+}
+
+.email-list-item[data-theme="dark"].selected {
+  background-color: rgba(109, 74, 255, 0.2);
+}
+
+.email-list-item[data-theme="dark"].unread {
+  background-color: rgba(109, 74, 255, 0.1);
+}
+
+/* Encryption indicators in dark mode */
+.email-list-item.encrypted[data-theme="dark"]::before {
+  background-color: var(--proton-secondary);
+}
+
+/* Dark mode text colors */
+.section-title[data-theme="dark"] {
+  color: var(--proton-text-secondary);
+}
+
+.folder-name[data-theme="dark"],
+.label-name[data-theme="dark"],
+.category-name[data-theme="dark"] {
+  color: var(--proton-text-primary);
+}
+
+.sender-name[data-theme="dark"] {
+  color: var(--proton-text-primary);
+}
+
+.sender-email[data-theme="dark"] {
+  color: var(--proton-text-secondary);
+}
+
+.subject-text[data-theme="dark"] {
+  color: var(--proton-text-primary);
+}
+
+.email-preview[data-theme="dark"] {
+  color: var(--proton-text-secondary);
+}
+
+.email-time[data-theme="dark"] {
+  color: var(--proton-text-secondary);
+}
+
+/* Privacy panel dark mode */
+.privacy-panel[data-theme="dark"] h3 {
+  color: var(--proton-text-primary);
+}
+
+.privacy-label[data-theme="dark"] {
+  color: var(--proton-text-primary);
+}
+
+.privacy-description[data-theme="dark"] {
+  color: var(--proton-text-secondary);
+}
+
+/* Security indicators dark mode */
+.security-indicator[data-theme="dark"] {
+  background-color: var(--proton-bg-tertiary);
+  color: var(--proton-text-secondary);
+}
+
+.security-indicator.encrypted[data-theme="dark"] {
+  background-color: rgba(0, 212, 170, 0.2);
+  color: var(--proton-secondary);
+}
+
+.security-indicator.verified[data-theme="dark"] {
+  background-color: rgba(109, 74, 255, 0.2);
+  color: var(--proton-primary);
+}
+
+/* Dark mode labels */
+.email-label.label-work[data-theme="dark"] {
+  background-color: rgba(109, 74, 255, 0.2);
+  color: var(--proton-primary);
+}
+
+.email-label.label-personal[data-theme="dark"] {
+  background-color: rgba(0, 212, 170, 0.2);
+  color: var(--proton-secondary);
+}
+
+.email-label.label-important[data-theme="dark"] {
+  background-color: rgba(255, 107, 53, 0.2);
+  color: var(--proton-accent);
+}

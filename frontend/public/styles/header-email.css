@@ -1,0 +1,247 @@
+/* Header Styles for Email Service */
+
+.header {
+  background-color: var(--bg-primary, #ffffff);
+  border-bottom: 1px solid var(--border, #e9ecef);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+/* Logo */
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-primary, #1a1a1a);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+}
+
+.logo-text {
+  font-weight: 700;
+}
+
+/* Navigation */
+.header-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 32px;
+}
+
+.nav-item {
+  margin: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-secondary, #6c757d);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary, #667eea);
+  background-color: var(--bg-secondary, #f8f9fa);
+}
+
+/* User Menu */
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.875rem;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary, #1a1a1a);
+  line-height: 1.2;
+}
+
+.user-email {
+  font-size: 0.75rem;
+  color: var(--text-secondary, #6c757d);
+  line-height: 1.2;
+}
+
+.user-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.action-button:hover {
+  background-color: var(--bg-secondary, #f8f9fa);
+  color: var(--primary, #667eea);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-menu-toggle:hover {
+  background-color: var(--bg-secondary, #f8f9fa);
+}
+
+.hamburger-line {
+  width: 20px;
+  height: 2px;
+  background-color: var(--text-primary, #1a1a1a);
+  transition: all 0.3s ease;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] .header {
+  background-color: var(--bg-primary, #202124);
+  border-bottom-color: var(--border, #3c4043);
+}
+
+[data-theme="dark"] .logo-link {
+  color: var(--text-primary, #e8eaed);
+}
+
+[data-theme="dark"] .nav-link {
+  color: var(--text-secondary, #9aa0a6);
+}
+
+[data-theme="dark"] .nav-link:hover {
+  color: var(--primary, #4285f4);
+  background-color: var(--bg-secondary, #292a2d);
+}
+
+[data-theme="dark"] .user-name {
+  color: var(--text-primary, #e8eaed);
+}
+
+[data-theme="dark"] .user-email {
+  color: var(--text-secondary, #9aa0a6);
+}
+
+[data-theme="dark"] .action-button:hover {
+  background-color: var(--bg-secondary, #292a2d);
+  color: var(--primary, #4285f4);
+}
+
+[data-theme="dark"] .mobile-menu-toggle:hover {
+  background-color: var(--bg-secondary, #292a2d);
+}
+
+[data-theme="dark"] .hamburger-line {
+  background-color: var(--text-primary, #e8eaed);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 16px;
+  }
+  
+  .header-nav {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .user-details {
+    display: none;
+  }
+  
+  .user-actions {
+    gap: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    display: none;
+  }
+  
+  .user-info {
+    gap: 8px;
+  }
+}

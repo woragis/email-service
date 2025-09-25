@@ -1,0 +1,170 @@
+/* Outlook Advanced Theme - Light Mode */
+
+/* Root Variables */
+:root {
+  --outlook-primary: #0078d4;
+  --outlook-secondary: #107c10;
+  --outlook-accent: #ff8c00;
+  --outlook-error: #d13438;
+  --outlook-bg-primary: #ffffff;
+  --outlook-bg-secondary: #f3f2f1;
+  --outlook-bg-tertiary: #edebe9;
+  --outlook-text-primary: #323130;
+  --outlook-text-secondary: #605e5c;
+  --outlook-text-tertiary: #8a8886;
+  --outlook-border: #edebe9;
+  --outlook-border-light: #f3f2f1;
+  --outlook-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --outlook-shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Outlook Layout */
+.email-layout.outlook-advanced {
+  background-color: var(--outlook-bg-secondary);
+  color: var(--outlook-text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.outlook-advanced-layout .email-container {
+  display: flex;
+  height: 100vh;
+  background-color: var(--outlook-bg-secondary);
+}
+
+/* Enhanced Sidebar */
+.email-sidebar.advanced {
+  width: var(--sidebar-width, 280px);
+  background-color: var(--outlook-bg-primary);
+  border-right: 1px solid var(--outlook-border);
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+}
+
+.advanced-features-panel {
+  margin-top: 20px;
+  padding: 16px;
+  border-top: 1px solid var(--outlook-border-light);
+}
+
+.features-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--outlook-border);
+  margin-bottom: 16px;
+}
+
+.feature-tab {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--outlook-text-secondary);
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.feature-tab.active {
+  color: var(--outlook-primary);
+  border-bottom-color: var(--outlook-primary);
+}
+
+.features-content h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--outlook-text-primary);
+  margin-bottom: 8px;
+}
+
+.features-content p {
+  font-size: 12px;
+  color: var(--outlook-text-secondary);
+  margin-bottom: 12px;
+}
+
+/* Enhanced Toolbar */
+.email-toolbar.advanced {
+  padding: 16px;
+  border-bottom: 1px solid var(--outlook-border);
+  background-color: var(--outlook-bg-primary);
+  box-shadow: var(--outlook-shadow);
+}
+
+.advanced-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Enhanced Email List */
+.email-list-item {
+  display: grid;
+  grid-template-columns: 24px 24px 1fr auto 100px 80px;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--outlook-border-light);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-items: center;
+}
+
+.email-list-item:hover {
+  background-color: var(--outlook-bg-tertiary);
+}
+
+.email-list-item.selected {
+  background-color: rgba(0, 120, 212, 0.1);
+}
+
+.email-list-item.unread {
+  background-color: rgba(0, 120, 212, 0.05);
+}
+
+/* Category indicators */
+.email-label.label-work {
+  background-color: rgba(0, 120, 212, 0.1);
+  color: var(--outlook-primary);
+}
+
+.email-label.label-personal {
+  background-color: rgba(16, 124, 16, 0.1);
+  color: var(--outlook-secondary);
+}
+
+.email-label.label-important {
+  background-color: rgba(255, 140, 0, 0.1);
+  color: var(--outlook-accent);
+}
+
+/* Outlook-specific styling */
+.email-layout.outlook-advanced .email-sidebar {
+  border-right: 2px solid var(--outlook-border);
+}
+
+.email-layout.outlook-advanced .email-list-panel {
+  border-right: 1px solid var(--outlook-border);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .outlook-advanced-layout .email-container {
+    flex-direction: column;
+  }
+  
+  .email-sidebar.advanced {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--outlook-border);
+  }
+  
+  .email-list-panel {
+    width: 100%;
+    border-right: none;
+  }
+  
+  .email-content-panel {
+    width: 100%;
+  }
+}
