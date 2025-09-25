@@ -1,11 +1,9 @@
 'use client';
 
 import React from 'react';
-import { FaMusic } from 'react-icons/fa';
-import { Button } from '../../ui';
+import { FaEnvelope } from 'react-icons/fa';
 import { ThemeSwitcher } from '../ThemeSwitcher';
-import { useAuth } from '@/lib/stores';
-import { useLogout } from '@/hooks';
+import { usePreferencesStore } from '../../../stores/preferences';
 import './Header.css';
 import Link from 'next/link';
 
@@ -14,12 +12,8 @@ export interface ClientHeaderProps {
 }
 
 export const ClientHeader: React.FC<ClientHeaderProps> = ({ className = '' }) => {
-  const { isAuthenticated, user } = useAuth();
-  const logoutMutation = useLogout();
+  const { preferences } = usePreferencesStore();
 
-  const handleLogout = () => {
-    logoutMutation.mutate();
-  };
 
   return (
     <header className={`header ${className}`}>
@@ -27,8 +21,8 @@ export const ClientHeader: React.FC<ClientHeaderProps> = ({ className = '' }) =>
         {/* Logo */}
         <div className="header-logo">
           <Link href="/" className="logo-link">
-            <span className="logo-icon"><FaMusic /></span>
-            <span className="logo-text">Jazz Melodic</span>
+            <span className="logo-icon"><FaEnvelope /></span>
+            <span className="logo-text">EmailService</span>
           </Link>
         </div>
 
@@ -36,64 +30,36 @@ export const ClientHeader: React.FC<ClientHeaderProps> = ({ className = '' }) =>
         <nav className="header-nav">
           <ul className="nav-list">
             <li className="nav-item">
-              <Link href="/videos" className="nav-link">
-                Videos
+              <Link href="/email" className="nav-link">
+                Inbox
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/blog" className="nav-link">
-                Blog
+              <Link href="/email?folder=sent" className="nav-link">
+                Sent
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/courses" className="nav-link">
-                Courses
+              <Link href="/email?folder=drafts" className="nav-link">
+                Drafts
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/about" className="nav-link">
-                About
+              <Link href="/email?folder=starred" className="nav-link">
+                Starred
               </Link>
             </li>
-            {isAuthenticated && (
-              <li className="nav-item">
-                <Link href="/profile" className="nav-link">
-                  Profile
-                </Link>
-              </li>
-            )}
+            <li className="nav-item">
+              <Link href="/email?folder=trash" className="nav-link">
+                Trash
+              </Link>
+            </li>
           </ul>
         </nav>
 
         {/* Actions */}
         <div className="header-actions">
           <ThemeSwitcher />
-          {isAuthenticated ? (
-            <>
-              <div className="user-menu">
-                <span className="user-greeting">
-                  Welcome, {user?.username}
-                </span>
-                <Button 
-                  variant="ghost" 
-                  size="sm"
-                  onClick={handleLogout}
-                  disabled={logoutMutation.isPending}
-                >
-                  {logoutMutation.isPending ? 'Signing out...' : 'Sign out'}
-                </Button>
-              </div>
-            </>
-          ) : (
-            <>
-              <Link href="/login" className="btn btn-ghost btn-sm">
-                Sign In
-              </Link>
-              <Link href="/register" className="btn btn-primary btn-sm">
-                Get Started
-              </Link>
-            </>
-          )}
         </div>
 
         {/* Mobile Menu Toggle */}

@@ -8,7 +8,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import { initializeAuth, AuthInitializationResult } from '@/lib/auth/initializer';
-import { useAuthStore, useAuth } from '@/lib/stores/auth';
+import { useAuthStore, useAuth } from '@/stores/auth';
 
 interface AuthContextType {
   isInitialized: boolean;

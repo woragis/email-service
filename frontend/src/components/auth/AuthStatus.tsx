@@ -6,7 +6,7 @@
 'use client';
 
 import React from 'react';
-import { useAuth } from '@/lib/stores/auth';
+import { useAuth } from '@/stores/auth';
 import { useAuthContext } from '@/components/providers/AuthProvider';
 import { authCookies } from '@/lib/utils/cookies';
 
