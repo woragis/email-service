@@ -1,0 +1,269 @@
+/* ========================================
+   JAZZ MELODIC PLATFORM - COLOR SYSTEM
+   Dark Modern Aesthetic with Light Theme Support
+   ======================================== */
+
+:root {
+  /* ===== BASE COLORS ===== */
+  
+  /* Dark Theme Colors */
+  --color-bg-primary: #0a0a0a;        /* Deep black - main background */
+  --color-bg-secondary: #1a1a1a;      /* Charcoal - cards, panels */
+  --color-bg-tertiary: #2a2a2a;       /* Dark gray - hover states */
+  --color-bg-elevated: #1f1f1f;       /* Elevated surfaces */
+  
+  /* Light Theme Colors */
+  --color-bg-primary-light: #ffffff;  /* Pure white - main background */
+  --color-bg-secondary-light: #f8f9fa; /* Light gray - cards, panels */
+  --color-bg-tertiary-light: #e9ecef;  /* Medium gray - hover states */
+  --color-bg-elevated-light: #ffffff;  /* Elevated surfaces */
+  
+  /* ===== TEXT COLORS ===== */
+  
+  /* Dark Theme Text */
+  --color-text-primary: #ffffff;      /* Primary text - high contrast */
+  --color-text-secondary: #b3b3b3;    /* Secondary text - medium contrast */
+  --color-text-tertiary: #808080;     /* Tertiary text - low contrast */
+  --color-text-inverse: #0a0a0a;      /* Text on light backgrounds */
+  
+  /* Light Theme Text */
+  --color-text-primary-light: #1a1a1a; /* Primary text - high contrast */
+  --color-text-secondary-light: #4a4a4a; /* Secondary text - medium contrast */
+  --color-text-tertiary-light: #6a6a6a;  /* Tertiary text - low contrast */
+  --color-text-inverse-light: #ffffff;   /* Text on dark backgrounds */
+  
+  /* ===== ACCENT COLORS ===== */
+  
+  /* Primary Accent - Electric Blue */
+  --color-accent-primary: #00d4ff;     /* Main brand color */
+  --color-accent-primary-hover: #00b8e6; /* Hover state */
+  --color-accent-primary-light: #33ddff; /* Light variant */
+  --color-accent-primary-dark: #0099cc;  /* Dark variant */
+  
+  /* Secondary Accent - Electric Green */
+  --color-accent-secondary: #00ff88;   /* Success, positive actions */
+  --color-accent-secondary-hover: #00e677; /* Hover state */
+  --color-accent-secondary-light: #33ff99; /* Light variant */
+  --color-accent-secondary-dark: #00cc6a;  /* Dark variant */
+  
+  /* Tertiary Accent - Electric Purple */
+  --color-accent-tertiary: #8b5cf6;    /* Premium features, highlights */
+  --color-accent-tertiary-hover: #7c3aed; /* Hover state */
+  --color-accent-tertiary-light: #a78bfa; /* Light variant */
+  --color-accent-tertiary-dark: #6d28d9;  /* Dark variant */
+  
+  /* ===== CONTENT TYPE COLORS ===== */
+  
+  /* Video Content */
+  --color-video: #00d4ff;              /* Electric blue */
+  --color-video-bg: rgba(0, 212, 255, 0.1); /* Subtle background */
+  --color-video-border: rgba(0, 212, 255, 0.3); /* Border accent */
+  
+  /* Blog Content */
+  --color-blog: #00ff88;               /* Electric green */
+  --color-blog-bg: rgba(0, 255, 136, 0.1); /* Subtle background */
+  --color-blog-border: rgba(0, 255, 136, 0.3); /* Border accent */
+  
+  /* Course Content */
+  --color-course: #8b5cf6;             /* Electric purple */
+  --color-course-bg: rgba(139, 92, 246, 0.1); /* Subtle background */
+  --color-course-border: rgba(139, 92, 246, 0.3); /* Border accent */
+  
+  /* ===== STATUS COLORS ===== */
+  
+  /* Success */
+  --color-success: #00ff88;
+  --color-success-bg: rgba(0, 255, 136, 0.1);
+  --color-success-border: rgba(0, 255, 136, 0.3);
+  
+  /* Warning */
+  --color-warning: #ffb800;
+  --color-warning-bg: rgba(255, 184, 0, 0.1);
+  --color-warning-border: rgba(255, 184, 0, 0.3);
+  
+  /* Error */
+  --color-error: #ff4757;
+  --color-error-bg: rgba(255, 71, 87, 0.1);
+  --color-error-border: rgba(255, 71, 87, 0.3);
+  
+  /* Info */
+  --color-info: #00d4ff;
+  --color-info-bg: rgba(0, 212, 255, 0.1);
+  --color-info-border: rgba(0, 212, 255, 0.3);
+  
+  /* ===== INTERACTIVE ELEMENTS ===== */
+  
+  /* Buttons */
+  --color-button-primary: #00d4ff;
+  --color-button-primary-hover: #00b8e6;
+  --color-button-primary-active: #0099cc;
+  --color-button-secondary: #2a2a2a;
+  --color-button-secondary-hover: #3a3a3a;
+  --color-button-secondary-active: #4a4a4a;
+  
+  /* Links */
+  --color-link: #00d4ff;
+  --color-link-hover: #00b8e6;
+  --color-link-visited: #8b5cf6;
+  
+  /* Borders */
+  --color-border-primary: #3a3a3a;
+  --color-border-secondary: #2a2a2a;
+  --color-border-accent: #00d4ff;
+  
+  /* ===== SHADOWS ===== */
+  
+  /* Dark Theme Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.3);
+  --shadow-glow-green: 0 0 20px rgba(0, 255, 136, 0.3);
+  --shadow-glow-purple: 0 0 20px rgba(139, 92, 246, 0.3);
+  
+  /* Light Theme Shadows */
+  --shadow-sm-light: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-md-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg-light: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl-light: 0 20px 25px rgba(0, 0, 0, 0.15);
+  
+  /* ===== GRADIENTS ===== */
+  
+  /* Primary Gradients */
+  --gradient-primary: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%);
+  --gradient-secondary: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+  --gradient-tertiary: linear-gradient(135deg, #8b5cf6 0%, #ff4757 100%);
+  
+  /* Background Gradients */
+  --gradient-bg: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  --gradient-bg-light: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  
+  /* ===== SPACING ===== */
+  
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  
+  /* ===== BORDER RADIUS ===== */
+  
+  --radius-sm: 0.25rem;    /* 4px */
+  --radius-md: 0.5rem;     /* 8px */
+  --radius-lg: 0.75rem;    /* 12px */
+  --radius-xl: 1rem;       /* 16px */
+  --radius-2xl: 1.5rem;    /* 24px */
+  --radius-full: 9999px;   /* Fully rounded */
+  
+  /* ===== TYPOGRAPHY ===== */
+  
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-family-display: 'Space Grotesk', 'Inter', sans-serif;
+  
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* ===== TRANSITIONS ===== */
+  
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+  
+  /* ===== Z-INDEX ===== */
+  
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+}
+
+/* ===== LIGHT THEME OVERRIDES ===== */
+[data-theme="light"] {
+  /* Background Colors */
+  --color-bg-primary: var(--color-bg-primary-light);
+  --color-bg-secondary: var(--color-bg-secondary-light);
+  --color-bg-tertiary: var(--color-bg-tertiary-light);
+  --color-bg-elevated: var(--color-bg-elevated-light);
+  
+  /* Text Colors */
+  --color-text-primary: var(--color-text-primary-light);
+  --color-text-secondary: var(--color-text-secondary-light);
+  --color-text-tertiary: var(--color-text-tertiary-light);
+  --color-text-inverse: var(--color-text-inverse-light);
+  
+  /* Shadows */
+  --shadow-sm: var(--shadow-sm-light);
+  --shadow-md: var(--shadow-md-light);
+  --shadow-lg: var(--shadow-lg-light);
+  --shadow-xl: var(--shadow-xl-light);
+  
+  /* Background Gradient */
+  --gradient-bg: var(--gradient-bg-light);
+  
+  /* Button Colors */
+  --color-button-secondary: #e9ecef;
+  --color-button-secondary-hover: #dee2e6;
+  --color-button-secondary-active: #ced4da;
+  
+  /* Border Colors */
+  --color-border-primary: #dee2e6;
+  --color-border-secondary: #e9ecef;
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Background Colors */
+.bg-primary { background-color: var(--color-bg-primary); }
+.bg-secondary { background-color: var(--color-bg-secondary); }
+.bg-tertiary { background-color: var(--color-bg-tertiary); }
+.bg-elevated { background-color: var(--color-bg-elevated); }
+
+/* Text Colors */
+.text-primary { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-tertiary { color: var(--color-text-tertiary); }
+.text-inverse { color: var(--color-text-inverse); }
+
+/* Accent Colors */
+.text-accent-primary { color: var(--color-accent-primary); }
+.text-accent-secondary { color: var(--color-accent-secondary); }
+.text-accent-tertiary { color: var(--color-accent-tertiary); }
+
+/* Content Type Colors */
+.text-video { color: var(--color-video); }
+.text-blog { color: var(--color-blog); }
+.text-course { color: var(--color-course); }
+
+/* Glow Effects */
+.glow-primary { box-shadow: var(--shadow-glow); }
+.glow-secondary { box-shadow: var(--shadow-glow-green); }
+.glow-tertiary { box-shadow: var(--shadow-glow-purple); }

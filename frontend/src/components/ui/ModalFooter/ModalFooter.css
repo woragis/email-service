@@ -1,0 +1,22 @@
+/* Modal Footer Styles */
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  border-top: 1px solid var(--color-border-primary);
+  background: var(--color-bg-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-footer {
+    padding: var(--spacing-md);
+    flex-direction: column;
+  }
+  
+  .modal-footer .button {
+    width: 100%;
+  }
+}
